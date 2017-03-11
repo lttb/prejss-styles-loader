@@ -1,0 +1,21 @@
+{
+  "name": "prejss-styles-loader",
+  "version": "0.0.1",
+  "description": "Webpack styles loader for prejss",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "preversion": "npm run lint",
+    "postversion": "git push --follow-tags && npm publish"
+  },
+  "repository": "https://github.com/lttb/prejss-styles-loader.git",
+  "author": "lttb <connect@lttb.net>",
+  "license": "MIT",
+  "dependencies": {
+    "postjss": "0.0.9"
+  },
+  "devDependencies": {
+    "@lttb/eslint-config-default": "https://github.com/lttb/configs#js",
+    "eslint": "^3.17.1"
+  }
+}
