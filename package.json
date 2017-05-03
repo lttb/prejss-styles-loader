@@ -1,6 +1,6 @@
 {
   "name": "prejss-styles-loader",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Webpack styles loader for prejss",
   "main": "src/index.js",
   "scripts": {
