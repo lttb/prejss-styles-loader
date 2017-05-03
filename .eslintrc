@@ -1,1 +1,5 @@
 extends: '@lttb/default'
+rules:
+  quotes:
+    - error
+    - avoidEscape: true

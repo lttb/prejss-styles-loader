@@ -1,15 +1,16 @@
-const postjssAsync = require('postjss/runtime/async').default
-
+const { asyncParser } = require('prejss-postcss-parser')
 
 function loader(source) {
+  if (!source) return
+
   this.cacheable()
 
   const callback = this.async()
 
-  postjssAsync.then(postjss => postjss(source))
+
+  asyncParser(source)
     .then(styles => callback(null, `module.exports = ${JSON.stringify(styles)};`))
     .catch(callback)
 }
-
 
 module.exports = loader

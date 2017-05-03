@@ -5,17 +5,23 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src",
-    "preversion": "npm run lint",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "preversion": "npm run lint && npm run test",
     "postversion": "git push --follow-tags && npm publish"
   },
   "repository": "https://github.com/lttb/prejss-styles-loader.git",
   "author": "lttb <connect@lttb.net>",
   "license": "MIT",
   "dependencies": {
-    "postjss": "0.0.9"
+    "prejss-postcss-parser": "^0.3.2"
   },
   "devDependencies": {
     "@lttb/eslint-config-default": "https://github.com/lttb/configs#js",
-    "eslint": "^3.17.1"
+    "eslint": "^3.17.1",
+    "jest": "^19.0.2"
+  },
+  "jest": {
+    "rootDir": "src"
   }
 }
