@@ -20,7 +20,7 @@ yarn add -D prejss-styles-loader
 import injectSheet from 'react-jss'
 
 // this style would become to JSS object literal
-import style from './style.sss'
+import style from './style.css'
 
 const App = () => // ...
 
@@ -29,12 +29,13 @@ const App = () => // ...
 export default injectSheet(style)(App)
 ```
 
-*styles.sss*
+*styles.css*
 ```stylus
-.app
-  position: absolute
-  top: 0
-  left: 0
+app {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 ```
 
 ### Webpack config example
