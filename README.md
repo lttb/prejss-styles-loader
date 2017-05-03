@@ -1,6 +1,8 @@
 # prejss-styles-loader
 
-Styles loader for PreJSS and Webpack. 
+Styles loader for Webpack on top of [PreJSS](https://github.com/axept/prejss).
+
+Process stylesheets from separate files via PostCSS to the JSS-like objects.
 
 ## Installation
 
@@ -17,11 +19,12 @@ yarn add -D prejss-styles-loader
 ```js
 import injectSheet from 'react-jss'
 
+// this style would become to JSS object literal
 import style from './style.sss'
 
-const App = () => ...
+const App = () => // ...
 
-...
+// ...
 
 export default injectSheet(style)(App)
 ```
@@ -34,7 +37,7 @@ export default injectSheet(style)(App)
   left: 0
 ```
 
-### Webpack
+### Webpack config example
 
 ```js
 rules: [{
@@ -46,4 +49,11 @@ rules: [{
     'prejss-styles-loader',
   ],
 }]
-```  
+```
+
+## Links
+- [PreJSS](https://github.com/axept/prejss)
+
+
+## License
+MIT
