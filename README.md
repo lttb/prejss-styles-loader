@@ -11,7 +11,7 @@ npm i -D prejss-styles-loader
 ```
 or
 ```sh
-yarn add -D prejss-styles-loader
+yarn add prejss-styles-loader -D
 ```
 
 ## Usage example
